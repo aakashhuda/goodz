@@ -1,18 +1,16 @@
 import { createRouter } from "vue-router";
-import HomePage from './home/HomePage.vue';
-
+import HomePage from "./home/HomePage.vue";
 
 const routes = [
-    {
-        path: "/",
-        component: HomePage
-    }
-]
-
+  {
+    path: "/",
+    component: HomePage,
+  },
+];
 
 export default function (history) {
-    return createRouter({
-        history,
-        routes,
-    })
-};
+  return createRouter({
+    history,
+    routes,
+  });
+}

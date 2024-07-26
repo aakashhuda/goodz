@@ -1,33 +1,33 @@
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import { defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
 
-import Icons from 'unplugin-icons/vite'
-import IconsResolver from 'unplugin-icons/resolver'
-import AutoImport from 'unplugin-auto-import/vite'
-import Components from 'unplugin-vue-components/vite'
-import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+import Icons from "unplugin-icons/vite";
+import IconsResolver from "unplugin-icons/resolver";
+import AutoImport from "unplugin-auto-import/vite";
+import Components from "unplugin-vue-components/vite";
+import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    vue(), 
+    vue(),
     AutoImport({
       resolvers: [
-        ElementPlusResolver(), 
+        ElementPlusResolver(),
         IconsResolver({
-          prefix: 'Icon',
-        }),]
+          prefix: "Icon",
+        }),
+      ],
     }),
     Components({
       resolvers: [
         IconsResolver({
-          enabledCollections: ['ep'],
+          enabledCollections: ["ep"],
         }),
-        ElementPlusResolver()
+        ElementPlusResolver(),
       ],
     }),
     Icons({
       autoInstall: true,
-    })
+    }),
   ],
-})
+});
