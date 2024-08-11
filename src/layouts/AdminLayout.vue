@@ -11,12 +11,12 @@ import AdminTopbar from "../components/admin/navs/AdminTopbar.vue";
 </script>
 
 <template>
-  <div id="admin-layout" class="flex h-full">
+  <div id="admin-layout" class="">
     <div id="admin-sidebar-container">
       <AdminSidebar />
     </div>
 
-    <div>
+    <div class="relative left-[12%]">
       <div id="admin-topbar-container">
         <AdminTopbar />
       </div>
