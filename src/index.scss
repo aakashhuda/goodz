@@ -1,0 +1,96 @@
+/* src/element-variables.scss */
+
+/* Base Colors */
+$--color-primary: #000000;
+$--color-success: #67C23A;
+$--color-warning: #E6A23C;
+$--color-danger: #F56C6C;
+$--color-info: #909399;
+
+/* Hover Colors */
+$--color-primary-light-2: lighten($--color-primary, 10%);
+$--color-primary-dark-2: darken($--color-primary, 10%);
+
+/* Button Colors */
+$--button-primary-bg-color: $--color-primary;
+$--button-primary-hover-bg-color: lighten($--color-primary, 10%);
+$--button-success-bg-color: $--color-success;
+$--button-success-hover-bg-color: lighten($--color-success, 10%);
+$--button-danger-bg-color: $--color-danger;
+$--button-danger-hover-bg-color: lighten($--color-danger, 10%);
+$--button-warning-bg-color: $--color-warning;
+$--button-warning-hover-bg-color: lighten($--color-warning, 10%);
+$--button-info-bg-color: $--color-info;
+$--button-info-hover-bg-color: lighten($--color-info, 10%);
+
+/* Link Colors */
+$--link-color: $--color-primary;
+$--link-hover-color: lighten($--color-primary, 10%);
+
+/* Input Colors */
+$--input-bg-color: #fff;
+$--input-border-color: #dcdfe6;
+$--input-hover-border-color: lighten($--input-border-color, 10%);
+$--input-focus-border-color: $--color-primary;
+
+/* Select Colors */
+$--select-dropdown-bg-color: #fff;
+$--select-item-hover-bg-color: $--color-primary-light-2;
+$--select-item-selected-bg-color: $--color-primary;
+
+/* Table Colors */
+$--table-header-bg-color: #f5f7fa;
+$--table-header-hover-bg-color: lighten($--table-header-bg-color, 10%);
+$--table-row-hover-bg-color: #f9f9f9;
+
+/* Tag Colors */
+$--tag-default-bg-color: #f0f2f5;
+$--tag-default-hover-bg-color: lighten($--tag-default-bg-color, 10%);
+$--tag-primary-bg-color: $--color-primary;
+$--tag-success-bg-color: $--color-success;
+$--tag-warning-bg-color: $--color-warning;
+$--tag-danger-bg-color: $--color-danger;
+$--tag-info-bg-color: $--color-info;
+
+/* Notification Colors */
+$--notification-bg-color: #edf2fc;
+$--notification-border-color: lighten($--notification-bg-color, 10%);
+$--notification-title-color: #303133;
+$--notification-content-color: #606266;
+
+/* Tooltip Colors */
+$--tooltip-bg-color: #303133;
+$--tooltip-border-color: darken($--tooltip-bg-color, 10%);
+$--tooltip-text-color: #fff;
+
+/* Progress Colors */
+$--progress-bar-color: $--color-primary;
+$--progress-bg-color: #ebeef5;
+$--progress-text-color: $--color-primary;
+
+/* Form Colors */
+$--form-item-label-color: #606266;
+$--form-item-error-color: $--color-danger;
+
+/* Pagination Colors */
+$--pagination-bg-color: #fff;
+$--pagination-hover-bg-color: lighten($--pagination-bg-color, 10%);
+$--pagination-active-bg-color: $--color-primary;
+$--pagination-text-color: #303133;
+$--pagination-hover-text-color: lighten($--pagination-text-color, 10%);
+$--pagination-active-text-color: #fff;
+
+/* Badge Colors */
+$--badge-bg-color: $--color-danger;
+$--badge-text-color: #fff;
+
+/* Tabs Colors */
+$--tabs-active-bar-color: $--color-primary;
+$--tabs-hover-bg-color: lighten($--color-primary, 10%);
+$--tabs-text-color: #303133;
+$--tabs-active-text-color: $--color-primary;
+
+/* Customize more components as needed */
+
+/* Import Element Plus styles */
+@import "~element-plus/theme-chalk/src/index";
