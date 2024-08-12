@@ -56,7 +56,6 @@
 import { ref, watch } from "vue";
 import {
   ArrowLeft,
-  ArrowRight,
   DataAnalysis,
   Box,
   Notebook,
@@ -69,7 +68,7 @@ watch(isExpanded, (currentSidebarState, previousSidebarState) => {
   emit("sideBarWidthChanged", currentSidebarState);
 });
 
-const handleSidebarWidth = () => {
+function handleSidebarWidth() {
   isExpanded.value = !isExpanded.value;
-};
+}
 </script>
