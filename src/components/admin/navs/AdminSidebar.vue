@@ -1,7 +1,7 @@
 <template>
   <nav
     id="admin-sidebar"
-    class="fixed h-full border-r-0 shadow-lg transition-background-color transition-width transition-opacity ease-in-out duration-500"
+    class="fixed h-full border-r-0 shadow-lg transition-all ease-in-out duration-500"
     :class="isExpanded ? 'w-[12%]' : 'w-[3.5%]'"
   >
     <header
@@ -9,10 +9,10 @@
       class="flex justify-center items-center gap-3"
     >
       <div class="w-full max-w-[60px]">
-        <img class="" src="../../../../public/images/tea.svg" alt="" />
+        <img class="" src="/images/tea.svg" alt="" />
       </div>
     </header>
-    <div class="absolute -right-4" :class="isExpanded ? '' : 'rotate-180'">
+    <div class="absolute -right-4 z-50" :class="isExpanded ? '' : 'rotate-180'">
       <el-button
         @click="handleSidebarWidth"
         id="expand-sidebar"
@@ -62,7 +62,7 @@ import {
 } from "@element-plus/icons-vue";
 
 const isExpanded = ref(true);
-const emit = defineEmits(["sidebarCollapse"]);
+const emit = defineEmits(["sideBarWidthChanged"]);
 
 watch(isExpanded, (currentSidebarState, previousSidebarState) => {
   emit("sideBarWidthChanged", currentSidebarState);

@@ -17,8 +17,8 @@ function changeCollapseState(isExpanded) {
     </div>
 
     <div
-      class="relative transition-background-color transition-width transition-opacity ease-in-out duration-500"
-      :class="sidebarExpanded ? 'left-[12%]' : 'left-[3.5%]'"
+      class="relative transition-all ease-in-out duration-500"
+      :class="sidebarExpanded ? 'left-[12%] w-[88%]' : 'left-[3.5%] w-[96.5%]'"
     >
       <div id="admin-topbar-container">
         <AdminTopbar />
