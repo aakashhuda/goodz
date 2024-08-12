@@ -1,209 +1,381 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
-    /* Chatgpt generated variables */
+  /* Chatgpt generated variables */
   --el-color-white: #ffffff;
-	--el-color-black: #000000;
-	--el-color-primary-rgb: 11, 78, 151;
-	--el-color-success-rgb: 103, 194, 58;
-	--el-color-warning-rgb: 230, 162, 60;
-	--el-color-danger-rgb: 245, 108, 108;
-	--el-color-error-rgb: 245, 108, 108;
-	--el-color-info-rgb: 144, 147, 153;
+  --el-color-black: #000000;
+  --el-color-primary-rgb: 11, 78, 151;
+  --el-color-success-rgb: 103, 194, 58;
+  --el-color-warning-rgb: 230, 162, 60;
+  --el-color-danger-rgb: 245, 108, 108;
+  --el-color-error-rgb: 245, 108, 108;
+  --el-color-info-rgb: 144, 147, 153;
 
-	--el-color-primary: rgb(var(--el-color-primary-rgb));
-	--el-color-primary-light-3: color-mix(in srgb, var(--el-color-primary), white 30%);
-	--el-color-primary-light-5: color-mix(in srgb, var(--el-color-primary), white 50%);
-	--el-color-primary-light-7: color-mix(in srgb, var(--el-color-primary), white 70%);
-	--el-color-primary-light-8: color-mix(in srgb, var(--el-color-primary), white 80%);
-	--el-color-primary-light-9: color-mix(in srgb, var(--el-color-primary), white 90%);
-	--el-color-primary-dark-2: color-mix(in srgb, var(--el-color-primary), black 20%);
+  --el-color-primary: rgb(var(--el-color-primary-rgb));
+  --el-color-primary-light-3: color-mix(
+    in srgb,
+    var(--el-color-primary),
+    white 30%
+  );
+  --el-color-primary-light-5: color-mix(
+    in srgb,
+    var(--el-color-primary),
+    white 50%
+  );
+  --el-color-primary-light-7: color-mix(
+    in srgb,
+    var(--el-color-primary),
+    white 70%
+  );
+  --el-color-primary-light-8: color-mix(
+    in srgb,
+    var(--el-color-primary),
+    white 80%
+  );
+  --el-color-primary-light-9: color-mix(
+    in srgb,
+    var(--el-color-primary),
+    white 90%
+  );
+  --el-color-primary-dark-2: color-mix(
+    in srgb,
+    var(--el-color-primary),
+    black 20%
+  );
 
-	--el-color-success: rgb(var(--el-color-success-rgb));
-	--el-color-success-light-3: color-mix(in srgb, var(--el-color-success), white 30%);
-	--el-color-success-light-5: color-mix(in srgb, var(--el-color-success), white 50%);
-	--el-color-success-light-7: color-mix(in srgb, var(--el-color-success), white 70%);
-	--el-color-success-light-8: color-mix(in srgb, var(--el-color-success), white 80%);
-	--el-color-success-light-9: color-mix(in srgb, var(--el-color-success), white 90%);
-	--el-color-success-dark-2: color-mix(in srgb, var(--el-color-success), black 20%);
+  --el-color-success: rgb(var(--el-color-success-rgb));
+  --el-color-success-light-3: color-mix(
+    in srgb,
+    var(--el-color-success),
+    white 30%
+  );
+  --el-color-success-light-5: color-mix(
+    in srgb,
+    var(--el-color-success),
+    white 50%
+  );
+  --el-color-success-light-7: color-mix(
+    in srgb,
+    var(--el-color-success),
+    white 70%
+  );
+  --el-color-success-light-8: color-mix(
+    in srgb,
+    var(--el-color-success),
+    white 80%
+  );
+  --el-color-success-light-9: color-mix(
+    in srgb,
+    var(--el-color-success),
+    white 90%
+  );
+  --el-color-success-dark-2: color-mix(
+    in srgb,
+    var(--el-color-success),
+    black 20%
+  );
 
-	--el-color-warning: rgb(var(--el-color-warning-rgb));
-	--el-color-warning-light-3: color-mix(in srgb, var(--el-color-warning), white 30%);
-	--el-color-warning-light-5: color-mix(in srgb, var(--el-color-warning), white 50%);
-	--el-color-warning-light-7: color-mix(in srgb, var(--el-color-warning), white 70%);
-	--el-color-warning-light-8: color-mix(in srgb, var(--el-color-warning), white 80%);
-	--el-color-warning-light-9: color-mix(in srgb, var(--el-color-warning), white 90%);
-	--el-color-warning-dark-2: color-mix(in srgb, var(--el-color-warning), black 20%);
+  --el-color-warning: rgb(var(--el-color-warning-rgb));
+  --el-color-warning-light-3: color-mix(
+    in srgb,
+    var(--el-color-warning),
+    white 30%
+  );
+  --el-color-warning-light-5: color-mix(
+    in srgb,
+    var(--el-color-warning),
+    white 50%
+  );
+  --el-color-warning-light-7: color-mix(
+    in srgb,
+    var(--el-color-warning),
+    white 70%
+  );
+  --el-color-warning-light-8: color-mix(
+    in srgb,
+    var(--el-color-warning),
+    white 80%
+  );
+  --el-color-warning-light-9: color-mix(
+    in srgb,
+    var(--el-color-warning),
+    white 90%
+  );
+  --el-color-warning-dark-2: color-mix(
+    in srgb,
+    var(--el-color-warning),
+    black 20%
+  );
 
-	--el-color-danger: rgb(var(--el-color-danger-rgb));
-	--el-color-danger-light-3: color-mix(in srgb, var(--el-color-danger), white 30%);
-	--el-color-danger-light-5: color-mix(in srgb, var(--el-color-danger), white 50%);
-	--el-color-danger-light-7: color-mix(in srgb, var(--el-color-danger), white 70%);
-	--el-color-danger-light-8: color-mix(in srgb, var(--el-color-danger), white 80%);
-	--el-color-danger-light-9: color-mix(in srgb, var(--el-color-danger), white 90%);
-	--el-color-danger-dark-2: color-mix(in srgb, var(--el-color-danger), black 20%);
+  --el-color-danger: rgb(var(--el-color-danger-rgb));
+  --el-color-danger-light-3: color-mix(
+    in srgb,
+    var(--el-color-danger),
+    white 30%
+  );
+  --el-color-danger-light-5: color-mix(
+    in srgb,
+    var(--el-color-danger),
+    white 50%
+  );
+  --el-color-danger-light-7: color-mix(
+    in srgb,
+    var(--el-color-danger),
+    white 70%
+  );
+  --el-color-danger-light-8: color-mix(
+    in srgb,
+    var(--el-color-danger),
+    white 80%
+  );
+  --el-color-danger-light-9: color-mix(
+    in srgb,
+    var(--el-color-danger),
+    white 90%
+  );
+  --el-color-danger-dark-2: color-mix(
+    in srgb,
+    var(--el-color-danger),
+    black 20%
+  );
 
-	--el-color-error: var(--el-color-danger);
-	--el-color-error-light-3: var(--el-color-danger-light-3);
-	--el-color-error-light-5: var(--el-color-danger-light-5);
-	--el-color-error-light-7: var(--el-color-danger-light-7);
-	--el-color-error-light-8: var(--el-color-danger-light-8);
-	--el-color-error-light-9: var(--el-color-danger-light-9);
-	--el-color-error-dark-2: var(--el-color-danger-dark-2);
+  --el-color-error: var(--el-color-danger);
+  --el-color-error-light-3: var(--el-color-danger-light-3);
+  --el-color-error-light-5: var(--el-color-danger-light-5);
+  --el-color-error-light-7: var(--el-color-danger-light-7);
+  --el-color-error-light-8: var(--el-color-danger-light-8);
+  --el-color-error-light-9: var(--el-color-danger-light-9);
+  --el-color-error-dark-2: var(--el-color-danger-dark-2);
 
-	--el-color-info: rgb(var(--el-color-info-rgb));
-	--el-color-info-light-3: color-mix(in srgb, var(--el-color-info), white 30%);
-	--el-color-info-light-5: color-mix(in srgb, var(--el-color-info), white 50%);
-	--el-color-info-light-7: color-mix(in srgb, var(--el-color-info), white 70%);
-	--el-color-info-light-8: color-mix(in srgb, var(--el-color-info), white 80%);
-	--el-color-info-light-9: color-mix(in srgb, var(--el-color-info), white 90%);
-	--el-color-info-dark-2: color-mix(in srgb, var(--el-color-info), black 20%);
+  --el-color-info: rgb(var(--el-color-info-rgb));
+  --el-color-info-light-3: color-mix(in srgb, var(--el-color-info), white 30%);
+  --el-color-info-light-5: color-mix(in srgb, var(--el-color-info), white 50%);
+  --el-color-info-light-7: color-mix(in srgb, var(--el-color-info), white 70%);
+  --el-color-info-light-8: color-mix(in srgb, var(--el-color-info), white 80%);
+  --el-color-info-light-9: color-mix(in srgb, var(--el-color-info), white 90%);
+  --el-color-info-dark-2: color-mix(in srgb, var(--el-color-info), black 20%);
 
-	--el-font-size-extra-large: 20px;
-	--el-font-size-large: 18px;
-	--el-font-size-medium: 16px;
-	--el-font-size-base: 14px;
-	--el-font-size-small: 13px;
-	--el-font-size-extra-small: 12px;
-	--el-font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
-	--el-font-weight-primary: 500;
-	--el-font-line-height-primary: 24px;
-	--el-index-normal: 1;
-	--el-index-top: 1000;
-	--el-index-popper: 2000;
-	--el-border-radius-base: 4px;
-	--el-border-radius-small: 2px;
-	--el-border-radius-round: 20px;
-	--el-border-radius-circle: 100%;
-	--el-transition-duration: 0.3s;
-	--el-transition-duration-fast: 0.2s;
-	--el-transition-function-ease-in-out-bezier: cubic-bezier(0.645, 0.045, 0.355, 1);
-	--el-transition-function-fast-bezier: cubic-bezier(0.23, 1, 0.32, 1);
-	--el-transition-all: all var(--el-transition-duration) var(--el-transition-function-ease-in-out-bezier);
-	--el-transition-fade: opacity var(--el-transition-duration) var(--el-transition-function-fast-bezier);
-	--el-transition-md-fade: transform var(--el-transition-duration) var(--el-transition-function-fast-bezier), opacity var(--el-transition-duration) var(--el-transition-function-fast-bezier);
-	--el-transition-fade-linear: opacity var(--el-transition-duration-fast) linear;
-	--el-transition-border: border-color var(--el-transition-duration-fast) var(--el-transition-function-ease-in-out-bezier);
-	--el-transition-box-shadow: box-shadow var(--el-transition-duration-fast) var(--el-transition-function-ease-in-out-bezier);
-	--el-transition-color: color var(--el-transition-duration-fast) var(--el-transition-function-ease-in-out-bezier);
-	--el-component-size-large: 40px;
-	--el-component-size: 32px;
-	--el-component-size-small: 24px;
-	color-scheme: light;
-	--el-bg-color: #ffffff;
-	--el-bg-color-page: #f2f3f5;
-	--el-bg-color-overlay: #ffffff;
-	--el-text-color-primary: #303133;
-	--el-text-color-regular: #606266;
-	--el-text-color-secondary: #909399;
-	--el-text-color-placeholder: #a8abb2;
-	--el-text-color-disabled: #c0c4cc;
-	--el-border-color: #dcdfe6;
-	--el-border-color-light: #e4e7ed;
-	--el-border-color-lighter: #ebeef5;
-	--el-border-color-extra-light: #f2f6fc;
-	--el-border-color-dark: #d4d7de;
-	--el-border-color-darker: #cdd0d6;
-	--el-fill-color: #f0f2f5;
-	--el-fill-color-light: #f5f7fa;
-	--el-fill-color-lighter: #fafafa;
-	--el-fill-color-extra-light: #fafcff;
-	--el-fill-color-dark: #ebedf0;
-	--el-fill-color-darker: #e6e8eb;
-	--el-fill-color-blank: #ffffff;
-	--el-box-shadow: 0px 12px 32px 4px rgba(0, 0, 0, 0.04), 0px 8px 20px rgba(0, 0, 0, 0.08);
-	--el-box-shadow-light: 0px 0px 12px rgba(0, 0, 0, 0.12);
-	--el-box-shadow-lighter: 0px 0px 6px rgba(0, 0, 0, 0.12);
-	--el-box-shadow-dark: 0px 16px 48px 16px rgba(0, 0, 0, 0.08), 0px 12px 32px rgba(0, 0, 0, 0.12), 0px 8px 16px -8px rgba(0, 0, 0, 0.16);
-	--el-disabled-bg-color: var(--el-fill-color-light);
-	--el-disabled-text-color: var(--el-text-color-placeholder);
-	--el-disabled-border-color: var(--el-border-color-light);
-	--el-overlay-color: rgba(0, 0, 0, 0.8);
-	--el-overlay-color-light: rgba(0, 0, 0, 0.7);
-	--el-overlay-color-lighter: rgba(0, 0, 0, 0.5);
-	--el-mask-color: rgba(255, 255, 255, 0.9);
-	--el-mask-color-extra-light: rgba(255, 255, 255, 0.3);
-	--el-border-width: 1px;
-	--el-border-style: solid;
-	--el-border-color-hover: var(--el-text-color-disabled);
-	--el-border: var(--el-border-width) var(--el-border-style) var(--el-border-color);
-	--el-svg-monochrome-grey: var(--el-border-color);
+  --el-font-size-extra-large: 20px;
+  --el-font-size-large: 18px;
+  --el-font-size-medium: 16px;
+  --el-font-size-base: 14px;
+  --el-font-size-small: 13px;
+  --el-font-size-extra-small: 12px;
+  --el-font-family: "Helvetica Neue", Helvetica, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  --el-font-weight-primary: 500;
+  --el-font-line-height-primary: 24px;
+  --el-index-normal: 1;
+  --el-index-top: 1000;
+  --el-index-popper: 2000;
+  --el-border-radius-base: 4px;
+  --el-border-radius-small: 2px;
+  --el-border-radius-round: 20px;
+  --el-border-radius-circle: 100%;
+  --el-transition-duration: 0.3s;
+  --el-transition-duration-fast: 0.2s;
+  --el-transition-function-ease-in-out-bezier: cubic-bezier(
+    0.645,
+    0.045,
+    0.355,
+    1
+  );
+  --el-transition-function-fast-bezier: cubic-bezier(0.23, 1, 0.32, 1);
+  --el-transition-all: all var(--el-transition-duration)
+    var(--el-transition-function-ease-in-out-bezier);
+  --el-transition-fade: opacity var(--el-transition-duration)
+    var(--el-transition-function-fast-bezier);
+  --el-transition-md-fade: transform var(--el-transition-duration)
+      var(--el-transition-function-fast-bezier),
+    opacity var(--el-transition-duration)
+      var(--el-transition-function-fast-bezier);
+  --el-transition-fade-linear: opacity var(--el-transition-duration-fast) linear;
+  --el-transition-border: border-color var(--el-transition-duration-fast)
+    var(--el-transition-function-ease-in-out-bezier);
+  --el-transition-box-shadow: box-shadow var(--el-transition-duration-fast)
+    var(--el-transition-function-ease-in-out-bezier);
+  --el-transition-color: color var(--el-transition-duration-fast)
+    var(--el-transition-function-ease-in-out-bezier);
+  --el-component-size-large: 40px;
+  --el-component-size: 32px;
+  --el-component-size-small: 24px;
+  color-scheme: light;
+  --el-bg-color: #ffffff;
+  --el-bg-color-page: #f2f3f5;
+  --el-bg-color-overlay: #ffffff;
+  --el-text-color-primary: #303133;
+  --el-text-color-regular: #606266;
+  --el-text-color-secondary: #909399;
+  --el-text-color-placeholder: #a8abb2;
+  --el-text-color-disabled: #c0c4cc;
+  --el-border-color: #dcdfe6;
+  --el-border-color-light: #e4e7ed;
+  --el-border-color-lighter: #ebeef5;
+  --el-border-color-extra-light: #f2f6fc;
+  --el-border-color-dark: #d4d7de;
+  --el-border-color-darker: #cdd0d6;
+  --el-fill-color: #f0f2f5;
+  --el-fill-color-light: #f5f7fa;
+  --el-fill-color-lighter: #fafafa;
+  --el-fill-color-extra-light: #fafcff;
+  --el-fill-color-dark: #ebedf0;
+  --el-fill-color-darker: #e6e8eb;
+  --el-fill-color-blank: #ffffff;
+  --el-box-shadow: 0px 12px 32px 4px rgba(0, 0, 0, 0.04),
+    0px 8px 20px rgba(0, 0, 0, 0.08);
+  --el-box-shadow-light: 0px 0px 12px rgba(0, 0, 0, 0.12);
+  --el-box-shadow-lighter: 0px 0px 6px rgba(0, 0, 0, 0.12);
+  --el-box-shadow-dark: 0px 16px 48px 16px rgba(0, 0, 0, 0.08),
+    0px 12px 32px rgba(0, 0, 0, 0.12), 0px 8px 16px -8px rgba(0, 0, 0, 0.16);
+  --el-disabled-bg-color: var(--el-fill-color-light);
+  --el-disabled-text-color: var(--el-text-color-placeholder);
+  --el-disabled-border-color: var(--el-border-color-light);
+  --el-overlay-color: rgba(0, 0, 0, 0.8);
+  --el-overlay-color-light: rgba(0, 0, 0, 0.7);
+  --el-overlay-color-lighter: rgba(0, 0, 0, 0.5);
+  --el-mask-color: rgba(255, 255, 255, 0.9);
+  --el-mask-color-extra-light: rgba(255, 255, 255, 0.3);
+  --el-border-width: 1px;
+  --el-border-style: solid;
+  --el-border-color-hover: var(--el-text-color-disabled);
+  --el-border: var(--el-border-width) var(--el-border-style)
+    var(--el-border-color);
+  --el-svg-monochrome-grey: var(--el-border-color);
 }
 
 @layer base {
   @font-face {
-    font-family: "AlexBrush-Regular";
-    font-weight: 400;
+    font-family: "Poppins";
+    font-weight: 100;
     font-style: normal;
-    src: url("../public/fonts/alex_brush/AlexBrush-Regular.ttf") format('ttf');
+    src: url("/fonts/poppins/Poppins-Thin.ttf") format("ttf");
   }
-
-  /* @font-face {
-    font-family: "Cantarell-Regular";
+  @font-face {
+    font-family: "Poppins";
+    font-weight: 100;
+    font-style: italic;
+    src: url("/fonts/poppins/Poppins-ThinItalic.ttf") format("ttf");
+  }
+  @font-face {
+    font-family: "Poppins";
+    font-weight: 200;
+    font-style: normal;
+    src: url("/fonts/poppins/Poppins-ExtraLight.ttf") format("ttf");
+  }
+  @font-face {
+    font-family: "Poppins";
+    font-weight: 200;
+    font-style: italic;
+    src: url("/fonts/poppins/Poppins-ExtraLightItalic.ttf") format("ttf");
+  }
+  @font-face {
+    font-family: "Poppins";
+    font-weight: 300;
+    font-style: normal;
+    src: url("/fonts/poppins/Poppins-Light.ttf") format("ttf");
+  }
+  @font-face {
+    font-family: "Poppins";
+    font-weight: 300;
+    font-style: italic;
+    src: url("/fonts/poppins/Poppins-LightItalic.ttf") format("ttf");
+  }
+  @font-face {
+    font-family: "Poppins";
     font-weight: 400;
     font-style: normal;
-    src: url("../public/fonts/cantarell/Cantarell-Regular.ttf") format('ttf');
-  } */
-
+    src: url("/fonts/poppins/Poppins-Regular.ttf") format("ttf");
+  }
   @font-face {
-    font-family: "Cantarell-Bold";
+    font-family: "Poppins";
+    font-weight: 400;
+    font-style: italic;
+    src: url("/fonts/poppins/Poppins-Italic.ttf") format("ttf");
+  }
+  @font-face {
+    font-family: "Poppins";
+    font-weight: 500;
+    font-style: normal;
+    src: url("/fonts/poppins/Poppins-Medium.ttf") format("ttf");
+  }
+  @font-face {
+    font-family: "Poppins";
+    font-weight: 500;
+    font-style: italic;
+    src: url("/fonts/poppins/Poppins-MediumItalic.ttf") format("ttf");
+  }
+  @font-face {
+    font-family: "Poppins";
+    font-weight: 600;
+    font-style: normal;
+    src: url("/fonts/poppins/Poppins-SemiBold.ttf") format("ttf");
+  }
+  @font-face {
+    font-family: "Poppins";
+    font-weight: 600;
+    font-style: italic;
+    src: url("/fonts/poppins/Poppins-SemiBoldItalic.ttf") format("ttf");
+  }
+  @font-face {
+    font-family: "Poppins";
     font-weight: 700;
     font-style: normal;
-    src: url("../public/fonts/cantarell/Cantarell-Bold.ttf") format('ttf');
+    src: url("/fonts/poppins/Poppins-Bold.ttf") format("ttf");
   }
-  
   @font-face {
-    font-family: "Cantarell-Oblique";
-    font-weight: 400;
-    font-style: oblique;
-    src: url("../public/fonts/cantarell/Cantarell-Oblique.ttf") format('ttf');
+    font-family: "Poppins";
+    font-weight: 700;
+    font-style: italic;
+    src: url("/fonts/poppins/Poppins-BoldItalic.ttf") format("ttf");
   }
-
   @font-face {
-    font-family: "Cantarell-BoldOblique";
-    font-weight: 400;
-    font-style: oblique;
-    src: url("../public/fonts/cantarell/Cantarell-BoldOblique.ttf") format('ttf');
+    font-family: "Poppins";
+    font-weight: 800;
+    font-style: normal;
+    src: url("/fonts/poppins/Poppins-ExtraBold.ttf") format("ttf");
+  }
+  @font-face {
+    font-family: "Poppins";
+    font-weight: 800;
+    font-style: italic;
+    src: url("/fonts/poppins/Poppins-ExtraBoldItalic.ttf") format("ttf");
   }
 }
 
-*{
-  font-family: "Cantarell-Regular";
-  font-family: "Montserrat", sans-serif;
+* {
   font-family: "Poppins", sans-serif;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
-.el-button--info, .el-button--info.el-button--info {
+.el-button--info,
+.el-button--info.el-button--info {
   color: #282828;
 }
 
 .custom-submit-btn {
-    background-color: var(--el-color-secondary);
-    color: #ffffff;
+  background-color: var(--el-color-secondary);
+  color: #ffffff;
 }
 
 .card {
-    /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    border-radius: 4px;
-  }
-  
-  /* On mouse-over, add a deeper shadow */
-  .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
-  
-  /* Add some padding inside the card container */
-  .container {
-    padding: 2px 16px;
-  }
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 4px;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}

@@ -13,8 +13,7 @@ export default {
         "fast-bezier": "cubic - bezier(0.23, 1, 0.32, 1)",
       },
       fontFamily: {
-        cantarell: "Cantarell-Regular",
-        alexbrush: "AlexBrush-Regular",
+        poppins: "Poppins",
       },
       colors: {
         primary: "#0b4e97",
