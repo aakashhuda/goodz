@@ -2,7 +2,7 @@
   <nav
     id="admin-sidebar"
     class="fixed h-full border-r-0 shadow-lg transition-all ease-in-out duration-500"
-    :class="isExpanded ? 'w-[12%]' : 'w-[3.5%]'"
+    :class="isExpanded ? 'w-[200px]' : 'w-[63px]'"
   >
     <header
       id="admin-sidebar-header"
@@ -24,6 +24,7 @@
     <ul class="mt-10 text-info">
       <li class="p-2">
         <router-link
+          :to="{}"
           class="block p-2 bg-[#EBEBEB] rounded flex items-center gap-2"
           ><el-icon :size="30"><DataAnalysis /></el-icon
           ><span :class="isExpanded ? 'opacity-1' : 'opacity-0'"
@@ -32,7 +33,7 @@
         >
       </li>
       <li class="p-2">
-        <router-link class="block p-2 flex items-center gap-2"
+        <router-link :to="{}" class="block p-2 flex items-center gap-2"
           ><el-icon :size="30"><Notebook /></el-icon
           ><span :class="isExpanded ? 'opacity-1' : 'opacity-0'"
             >Orders</span
@@ -40,7 +41,7 @@
         >
       </li>
       <li class="p-2">
-        <router-link class="block p-2 flex items-center gap-2"
+        <router-link :to="{}" class="block p-2 flex items-center gap-2"
           ><el-icon :size="30"><Box /></el-icon
           ><span :class="isExpanded ? 'opacity-1' : 'opacity-0'"
             >Products</span
